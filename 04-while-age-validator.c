@@ -17,7 +17,16 @@
 int main(void) {
     int age = -1;
 
+    printf("Enter age: ");
+    scanf("%d", &age);
+
     // TODO: add your while loop here to validate the input.
+    while(age < 0 || age > 120) {
+        printf("Error: Invalid age. Expecting 0-120: ");
+        scanf("%d", &age);
+    }
+
+    printf("Thanks, your entered %d\n", age);
 
     return 0;
 }

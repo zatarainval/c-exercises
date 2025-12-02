@@ -26,10 +26,23 @@ int main(void) {
     int count = 0;
 
     // TODO: ask for count and validate it is between 1 and MAX_NUMBERS.
+    printf("How many numbers? ");
+    scanf("%d", &count);
 
     // TODO: read values into the array using a loop.
+    for(int i = 0; i < count; i++) {
+        printf("Enter value: ");
+        scanf("%d", &numbers[i]);
+    }
 
+    int sum = 0;
     // TODO: compute sum and average, then print them.
+    for(int i = 0; i < count; i++) {
+        sum = sum + numbers[i];
+    }
+
+    printf("The sum is %d\n", sum);
+    printf("The average is %f\n", (float)sum/count);
 
     return 0;
 }
