@@ -24,25 +24,25 @@
 int main(void) {
     int numbers[MAX_NUMBERS];
     int count = 0;
+    int sum = 0;
+    int average = 0;
 
-    // TODO: ask for count and validate it is between 1 and MAX_NUMBERS.
-    printf("How many numbers? ");
+    printf("How many numbers do you want to enter? (1-%d): ", MAX_NUMBERS); // TODO: ask for count and validate it is between 1 and MAX_NUMBERS.
     scanf("%d", &count);
 
-    // TODO: read values into the array using a loop.
-    for(int i = 0; i < count; i++) {
-        printf("Enter value: ");
+    if(count < 1 || count > MAX_NUMBERS) { // TODO: read values into the array using a loop.
+        printf("Invalid number of entries. Please enter between 1 to %d entries.\n", MAX_NUMBERS);
+    }   
+    
+    for (int i = 0; i < count; i++) {
+        printf("Enter value %d: ", i + 1);
         scanf("%d", &numbers[i]);
+        sum += numbers[i];
     }
-
-    int sum = 0;
-    // TODO: compute sum and average, then print them.
-    for(int i = 0; i < count; i++) {
-        sum = sum + numbers[i];
-    }
-
-    printf("The sum is %d\n", sum);
-    printf("The average is %f\n", (float)sum/count);
+         // TODO: compute sum and average, then print them.
+    printf("Sum = %d\n", sum);
+    printf("Average = %f\n", sum / (double)count);
 
     return 0;
 }
+

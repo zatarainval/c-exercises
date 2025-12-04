@@ -14,8 +14,8 @@
 // - Inputs: -2 4 10    -> "Average: 4.0"
 // Hint: return type is double, so divide by 3.0 instead of 3.
 double average_of_three(int a, int b, int c) {
-    // TODO: replace this with the correct average calculation.
-    return 0.0;
+    double average;
+    return average = (a + b + c) / 3; // TODO: replace this with the correct average calculation. 
 }
 
 int main(void) {
@@ -26,7 +26,10 @@ int main(void) {
     printf("Enter three integers separated by spaces: ");
     scanf("%d %d %d", &first, &second, &third);
 
-    // TODO: call average_of_three and print the result.
+    double average = average_of_three(first, second, third); // TODO: call average_of_three and print the result.
+
+    printf("Inputs: %d, %d, %d\n", first, second, third);
+    printf("Average: %f.\n", average);
 
     return 0;
 }

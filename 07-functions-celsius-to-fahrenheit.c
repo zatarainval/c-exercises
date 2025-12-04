@@ -15,16 +15,21 @@
 // place using %.1f if you like.
 double celsius_to_fahrenheit(double celsius) {
     // TODO: return the converted temperature instead of 0.0
-    return 0.0;
+    double fahrenheit = celsius * 1.8 + 32;
+
+    return fahrenheit;
 }
 
 int main(void) {
     double celsius = 0.0;
+    
 
     printf("Enter temperature in Celsius: ");
     scanf("%lf", &celsius);
 
-    // TODO: call celsius_to_fahrenheit and print the converted value.
+    double fahrenheit = celsius_to_fahrenheit (celsius); // TODO: call celsius_to_fahrenheit and print the converted value.
+
+    printf("%lf C is %lf F.\n", celsius, fahrenheit);
 
     return 0;
 }
